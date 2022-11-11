@@ -1,7 +1,7 @@
 let parejasAcertadas = [];
 let numImgVisibles = 0;
 
-let puntos = 0;
+let intentos = 0;
 let partidaIniciada = false;
 window.onload = grid;
 
@@ -113,11 +113,12 @@ function comprobarParejas() {
 				parejas.push(imagenes[i]);
 			}
 		}
+		
 
 		if (parejas[0].getAttribute("src") != parejas[1].getAttribute("src")) {
-			if (puntos != 0) {
-				puntos--;
-			}
+			intentos++;
+			document.getElementById("intentos").innerHTML=intentos;
+			
 			setTimeout(
 				function () {
 					girarParejas(parejas[0], parejas[1]);
@@ -130,8 +131,11 @@ function comprobarParejas() {
 		}
 		else {
 			parejasAcertadas.push(parejas[0].getAttribute("src"));
-			puntos += 10;
+			
+			intentos++;
+			document.getElementById("intentos").innerHTML=intentos;
 			bloquearPanel(false);
+			
 			
 		}
 	}

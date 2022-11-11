@@ -13,7 +13,7 @@ html {
 
 /*CUERPO*/
 body {
-    background: #ffffff;
+    background: #356d4bb4;
 }
 
 /*CONTAINER ELEMENTS*/
@@ -73,6 +73,14 @@ body {
 input[type='image'] {
     background: white;    
     border-radius: 12px;     
+}
+
+input[visible="true"] {
+    background: white;    
+    border-radius: 12px;
+    
+    border: 4px solid green;
+         
 }
 
 .face {
@@ -140,4 +148,9 @@ input[type='image'] {
 .titlePtos {
     font-family: 'good-times';
     font-size: small;
+}
+
+p, span{
+    font-size: 27px;
+    color: white;
 }
